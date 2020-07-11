@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displaying the marks list</title>
+</head>
+<body>
+    <table border=5px padding= 5px text-align = center >
+            <tr>
+                <th>HALL TICKET</th>
+                <th>NAME_OF_THE_STUDENT</th>
+                <th>TELUGU</th>
+                <th>HINDI</th>
+                <th>ENGLISH</th>
+                <th>MATHS</th>
+                <th>SCIENCE</th>
+                <th>SOCIAL</th>
+                
+            </tr>
+            
+            {% for i in d %}
+            <tr>
+                    <td>{{i.hallticket}}</td>
+                    <td>{{i.Name}}</td>
+                    <td>{{i.t}}</td>
+                    <td>{{i.h}}</td>
+                    <td>{{i.e}}</td>
+                    <td>{{i.m}}</td>
+                    <td>{{i.s}}</td>
+                    <td>{{i.so}}</td>
+                    
+            </tr>
+            {% endfor %}
+
+
+    </table>
+</body>
+</html>

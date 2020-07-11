@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creating rows</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+    <label for="ht">hallticket<input type="number" name="ht" id="ht"></label><br>
+    <label for="n">Name<input type="text" name="n" id="n"></label><br>
+    <label for="t">Telugu<input type="number" name="t" id="t"></label><br>
+    <label for="h">Hindi<input type="number" name="h" id="h"></label><br>
+    <label for="m">english<input type="number" name="e" id="e"></label><br>
+    <label for="t">maths<input type="number" name="m" id="m"></label><br>
+    <label for="t">science<input type="number" name="s" id="s"></label><br>
+    <label for="t">social<input type="number" name="so" id="so"></label><br>
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>

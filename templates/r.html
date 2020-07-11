@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result</title>
+    <style>
+        body{
+            background-image :url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg');
+            background-attachment:fixed;
+	        background-size:cover;
+            color:white;
+        }
+        table td{
+            padding: 10px;
+            text-align: center;
+        }
+        label{
+            font-style: italic;
+            font-weight: 200;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+   <center>
+    <h2>JAWAHARLAL NEHRU UNIVERSITY-ANANTHAPUR</h2>
+    <H3>B.TECH FINAL YEAR</H3>
+    <table>
+       {% for i in d %}
+                  <tr>
+                      <td><label for="hallticket">hallticket = </label></td>
+                      <td>{{i.hallticket}}</td>
+                      <td><label for = 'name'>student_name = </label></td>
+                      <td>{{i.Name|capfirst}}</td>
+                    </tr>
+       {% endfor %}
+      </table>
+      <table border='5px' padding='10px' >
+        {% for i in d %}
+                  <tr>
+                    <td>subject code</td>
+                    <td>subject_name</td>
+                    <td>Marks</td>
+                    <td>Result</td>
+                  </tr>
+          {% if i.hallticket == 101 or i.hallticket == 102 or i.hallticket == 103 or i.hallticket == 104 or i.hallticket == 105 %}
+                  <tr>
+                    <td> <label> 19A03101</label></td>
+                    <td> <label for="ew"> ENGINEERING WORKSHOP</label></td>
+                    <td>{{i.t}}</td>
+                    <td>{% if i.t >= 35 %}
+                          p
+                        {% else %}
+                          f
+                        {% endif %}  
+                    </td>
+               
+                  </tr>
+                  <tr>
+                    <td><label>19A05101T</label></td>
+                    <td> <label for="psp"> PROBLEM SOLVING & PROGRAMMING</label></td>
+                    <td>{{i.h}}</td>
+                    <td>{% if i.h >= 35 %}
+                          p
+                        {% else %}
+                          f
+                        {% endif %}  
+                    </td>
+                  </tr>
+                  <tr>
+                     <td><label>19A52101T</label></td>
+                      <td><label for="COMMUNICATIVE ENGLISH I">COMMUNICATIVE ENGLISH I</label></td>
+                      <td>{{i.e}}</td>
+                      <td>{% if i.e >= 35 %}
+                  p
+               {% else %}
+                  f
+                {% endif %}  
+               </td>
+               
+             </tr>
+             <tr>
+                 <td><label>19A54101</label></td>
+                <td><label for="ALGEBRA AND CALCULUS">ALGEBRA AND CALCULUS</label></td>
+                <td>{{i.m}}</td>
+                <td>{% if i.m >= 35 %}
+                  p
+               {% else %}
+                  f
+                {% endif %}  
+               </td>
+               
+             </tr>
+             <tr>
+                 <td><label>19A56102T</label></td>
+                <td><label for="ENGINEERING PHYSICS">ENGINEERING PHYSICS</label></td>
+                <td>{{i.s}}</td>
+                <td>{% if i.s >= 35 %}
+                  p
+               {% else %}
+                  f
+                {% endif %}  
+               </td>
+               
+             </tr>
+             <tr>
+                 <td><label>19A05101P</label></td>
+                <td><label for="PROBLEM SOLVING & PROGRAMMING LAB">PROBLEM SOLVING & PROGRAMMING LAB</label></td>
+                <td>{{i.so}}</td>
+                <td>{% if i.so >= 35 %}
+                  p
+               {% else %}
+                  f
+                {% endif %}  
+               </td>
+               
+             </tr>
+             <!--#################################### ELIF CONDITION ################################################-->
+         {% elif i.hallticket == 201 or i.hallticket == 202 or i.hallticket == 203 or i.hallticket == 204 or i.hallticket == 205 %}
+         <tr>
+            <td><label>19A03101</label></td>
+            <td><label for="PROBLEM">PROBLEM SOLVING & PROGRAMMING LAB</label></td>
+            <td>{{i.t}}</td>
+            <td>{% if i.t >= 35 %}
+              p
+           {% else %}
+              f
+            {% endif %}  
+           </td>
+           
+         </tr>
+         <tr>
+             <td><label>19A05101T</label></td>
+            <td><label for="student_name">PROBLEM SOLVING & PROGRAMMING</label></td>
+            <td>{{i.h}}</td>
+            <td>{% if i.h >= 35 %}
+              p
+           {% else %}
+              f
+            {% endif %}  
+           </td>
+           
+         </tr>
+         <tr>
+             <td><label>19A52101T</label></td>
+            <td><label for="student_name">APPLIED PHYSICS</label></td>
+            <td>{{i.e}}</td>
+            <td>{% if i.e >= 35 %}
+              p
+           {% else %}
+              f
+            {% endif %}  
+           </td>
+           
+         </tr>
+         <tr>
+             <td><label>19A54101</label></td>
+            <td><label for="student_name">ALGEBRA AND CALCULUS</label></td>
+            <td>{{i.m}}</td>
+            <td>{% if i.m >= 35 %}
+              p
+           {% else %}
+              f
+            {% endif %}  
+           </td>
+           
+         </tr>
+         <tr>
+             <td><label>19A56102T</label></td>
+            <td><label for="student_name">COMMUNICATIVE ENGLISH </label></td>
+            <td>{{i.s}}</td>
+            <td>{% if i.s >= 35 %}
+              p
+           {% else %}
+              f
+            {% endif %}  
+           </td>
+           
+         </tr>
+         <tr>
+             <td><label>19A05101P</label></td>
+            <td> <label for="ELECTRICAL & ELECTRONICS ENGINEERING WORKSHOP"> ELECTRICAL & ELECTRONICS ENGINEERING WORKSHOP</label></td>
+            <td>{{i.so}}</td>
+            <td>{% if i.so >= 35 %}
+              p
+           {% else %}
+              f
+            {% endif %}  
+           </td>
+           
+         </tr>
+         <!--#################################### ELSE CONDITION ################################################-->
+         {% elif i.hallticket == 301 or i.hallticket == 302 or i.hallticket == 303 or i.hallticket == 304 or i.hallticket == 305  %}
+         <tr>
+          <td> <label> 19A03101</label></td>
+          <td> <label for="ew">ENGINEERING WORKSHOP </label></td>
+          <td>{{i.t}}</td>
+          <td>{% if i.t >= 35 %}
+            p
+         {% else %}
+            f
+          {% endif %}  
+         </td>
+         
+       </tr>
+       <tr>
+           <td> <label> 19A03102</label></td>
+          <td> <label for = "egl">ENGINEERING GRAPHICS LAB</label></td>
+          <td>{{i.h}}</td>
+          <td>{% if i.h >= 35 %}
+            p
+         {% else %}
+            f
+          {% endif %}  
+         </td>
+         
+       </tr>
+       <tr>
+           <td><label>19A05101P</label></td>
+          <td><label for="psp">PROBLEM SOLVING & PROGRAMMING LAB</label></td>
+          <td>{{i.e}}</td>
+          <td>{% if i.e >= 35 %}
+            p
+         {% else %}
+            f
+          {% endif %}  
+         </td>
+         
+       </tr>
+       <tr>
+           <td><label>19A54101</label></td>
+          <td><label for="ac">ALGEBRA AND CALCULUS</label></td>
+          <td>{{i.m}}</td>
+          <td>{% if i.m >= 35 %}
+            p
+         {% else %}
+            f
+          {% endif %}  
+         </td>
+         
+       </tr>
+       <tr>
+           <td><label>19A51101T</label></td>
+          <td><label for="ec">ENGINEERING CHEMISTRY</label></td>
+          <td>{{i.s}}</td>
+          <td>{% if i.s >= 35 %}
+            p
+         {% else %}
+            f
+          {% endif %}  
+         </td>
+         
+       </tr>
+       <tr>
+           <td>19A05101T</td>
+          <td><label for="psp">PROBLEM SOLVING & PROGRAMMING</label></td>
+          <td>{{i.so}}</td>
+          <td>{% if i.so >= 35 %}
+            p
+         {% else %}
+            f
+          {% endif %}  
+         </td>
+         
+       </tr>
+       <!-- ################################################################################################################-->
+          {% else %}
+              enter valid hallticket number
+
+
+        {% endif %}
+        {% endfor %}
+    </table>
+   </center>
+</body>
+</html>
